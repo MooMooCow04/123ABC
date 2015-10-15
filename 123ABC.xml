@@ -40,6 +40,44 @@
                 <field name="NUM">150</field>
               </block>
             </value>
+            <next>
+              <block type="controls_if" id="431" inline="false">
+                <value name="IF0">
+                  <block type="logic_compare" id="432" inline="true">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="sensor_object" id="433">
+                        <field name="OBJECT">LEFTFRONT</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="434">
+                        <field name="NUM">75</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="led_select" id="435" inline="true">
+                    <field name="ACTION">FLASH</field>
+                    <value name="LED">
+                      <block type="math_number" id="436">
+                        <field name="NUM">5</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="robot_delay" id="437" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="438">
+                        <field name="NUM">150</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
         </next>
       </block>
