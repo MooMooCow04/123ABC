@@ -7,7 +7,7 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="280">
+      <block type="movement_reverse" id="318">
         <next>
           <block type="robot_delay" id="291" inline="true">
             <value name="DELAY">
@@ -60,5 +60,8 @@
         </next>
       </block>
     </statement>
+    <next>
+      <block type="movement_stop" id="308"></block>
+    </next>
   </block>
 </xml>
