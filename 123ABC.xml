@@ -24,13 +24,17 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="led_select" id="404" inline="true">
-            <field name="ACTION">FLASH</field>
-            <value name="LED">
-              <block type="math_number" id="411">
-                <field name="NUM">5</field>
+          <block type="movement_forward" id="430">
+            <next>
+              <block type="led_select" id="404" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="math_number" id="411">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
               </block>
-            </value>
+            </next>
           </block>
         </statement>
         <next>
