@@ -6,42 +6,32 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="controls_whileUntil" id="215" inline="false">
-        <field name="MODE">UNTIL</field>
-        <value name="NUMBER">
-          <block type="sensor_button" id="222">
-            <field name="OBJECT">ENTER</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="movement_forward" id="199">
+      <block type="movement_forward" id="199">
+        <next>
+          <block type="robot_delay" id="201" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="208">
+                <field name="NUM">100</field>
+              </block>
+            </value>
             <next>
-              <block type="robot_delay" id="201" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="208">
-                    <field name="NUM">100</field>
-                  </block>
-                </value>
+              <block type="movement_left" id="132">
                 <next>
-                  <block type="movement_left" id="132">
-                    <next>
-                      <block type="robot_delay" id="134" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="141">
-                            <field name="NUM">100</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="movement_stop" id="189"></block>
-                        </next>
+                  <block type="robot_delay" id="134" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="141">
+                        <field name="NUM">100</field>
                       </block>
+                    </value>
+                    <next>
+                      <block type="movement_stop" id="189"></block>
                     </next>
                   </block>
                 </next>
               </block>
             </next>
           </block>
-        </statement>
+        </next>
       </block>
     </statement>
   </block>
