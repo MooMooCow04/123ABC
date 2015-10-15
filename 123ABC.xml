@@ -1,38 +1,47 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="215" inline="false" x="120" y="178">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="222">
-        <field name="OBJECT">ENTER</field>
+  <block type="controls_repeat" id="254" inline="true" x="86" y="141">
+    <value name="TIMES">
+      <block type="math_number" id="261">
+        <field name="NUM">2</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="199">
-        <next>
-          <block type="robot_delay" id="201" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="208">
-                <field name="NUM">100</field>
-              </block>
-            </value>
+      <block type="controls_whileUntil" id="215" inline="false">
+        <field name="MODE">UNTIL</field>
+        <value name="NUMBER">
+          <block type="sensor_button" id="222">
+            <field name="OBJECT">ENTER</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_forward" id="199">
             <next>
-              <block type="movement_left" id="132">
+              <block type="robot_delay" id="201" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="208">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="robot_delay" id="134" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="141">
-                        <field name="NUM">100</field>
-                      </block>
-                    </value>
+                  <block type="movement_left" id="132">
                     <next>
-                      <block type="movement_stop" id="189"></block>
+                      <block type="robot_delay" id="134" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="141">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="movement_stop" id="189"></block>
+                        </next>
+                      </block>
                     </next>
                   </block>
                 </next>
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
     </statement>
   </block>
