@@ -1,38 +1,42 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="254" inline="true" x="86" y="141">
-    <value name="TIMES">
-      <block type="math_number" id="261">
-        <field name="NUM">50</field>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="movement_forward" id="199">
+  <block type="oled_cleardisplay" id="298" x="88" y="98">
+    <next>
+      <block type="oled_setcursor" id="307" inline="true">
+        <value name="STARTX">
+          <block type="math_number" id="332">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="STARTY">
+          <block type="math_number" id="339">
+            <field name="NUM">10</field>
+          </block>
+        </value>
         <next>
-          <block type="robot_delay" id="201" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="208">
-                <field name="NUM">100</field>
-              </block>
-            </value>
+          <block type="oled_drawtext" id="316">
+            <field name="TEXT">5 + 5 =</field>
             <next>
-              <block type="movement_left" id="132">
-                <next>
-                  <block type="robot_delay" id="134" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="141">
-                        <field name="NUM">100</field>
+              <block type="oled_drawnumber" id="325" inline="true">
+                <value name="NUMBER">
+                  <block type="math_arithmetic" id="346" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="math_number" id="353">
+                        <field name="NUM">5</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="360">
+                        <field name="NUM">5</field>
                       </block>
                     </value>
                   </block>
-                </next>
+                </value>
               </block>
             </next>
           </block>
         </next>
       </block>
-    </statement>
-    <next>
-      <block type="movement_stop" id="189"></block>
     </next>
   </block>
 </xml>
