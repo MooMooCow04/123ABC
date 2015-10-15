@@ -1,23 +1,33 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="298" x="88" y="98">
-    <next>
-      <block type="oled_setcursor" id="307" inline="true">
-        <value name="STARTX">
-          <block type="math_number" id="332">
-            <field name="NUM">20</field>
-          </block>
-        </value>
-        <value name="STARTY">
-          <block type="math_number" id="339">
-            <field name="NUM">20</field>
-          </block>
-        </value>
+  <block type="controls_whileUntil" id="430" inline="false" x="165" y="173">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="488">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_cleardisplay" id="298">
         <next>
-          <block type="oled_drawtext" id="316">
-            <field name="TEXT">9 + 10 = POTATO </field>
+          <block type="oled_setcursor" id="307" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="332">
+                <field name="NUM">20</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="339">
+                <field name="NUM">20</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_drawtext" id="316">
+                <field name="TEXT">9 + 10 = POTATO </field>
+              </block>
+            </next>
           </block>
         </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
