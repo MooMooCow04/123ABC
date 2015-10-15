@@ -1,42 +1,22 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="10" x="147" y="157">
-    <next>
-      <block type="robot_delay" id="18" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="25">
-            <field name="NUM">1000</field>
-          </block>
-        </value>
+  <block type="controls_repeat" id="172" inline="true" x="113" y="92">
+    <value name="TIMES">
+      <block type="math_number" id="179">
+        <field name="NUM">100</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="movement_left" id="132">
         <next>
-          <block type="movement_left" id="79">
-            <next>
-              <block type="robot_delay" id="96" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="103">
-                    <field name="NUM">1500</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="movement_reverse" id="113">
-                    <next>
-                      <block type="robot_delay" id="115" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="122">
-                            <field name="NUM">2000</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="movement_stop" id="42"></block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
+          <block type="robot_delay" id="134" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="141">
+                <field name="NUM">50</field>
               </block>
-            </next>
+            </value>
           </block>
         </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
